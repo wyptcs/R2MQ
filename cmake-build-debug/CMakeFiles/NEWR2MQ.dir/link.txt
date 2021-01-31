@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/NEWR2MQ.dir/main.cpp.o  -o NEWR2MQ 
