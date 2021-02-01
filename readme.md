@@ -10,15 +10,15 @@ To make the library give the command make and this will create the lib: 'DFUDSR2
 To test other comparison test cases, give the command 'make dccdfuds' 'make dccbp' 'make sea'
 
 Compile:
-To use the library you must complie your program linking 'DFUDSR2MQ.a' and include the file for what you are using.
-For example to compile the file example.cpp (included here) we will run:
-g++ -std=c++11 -O3 -DNDEBUG example.cpp -o example DFUDSR2MQ.a -I ~/include -L ~/lib -lsdsl -ldivsufsort -ldivsufsort64
-This binary have to receive 2 parameter.
-1.- mode : execute which Top-2 structure, 0 : our encoding, 3 : Fischer, Heun Indexing
-2.- path : integer array file path, integer should be splited using '\n'
-3.- query size : gives query size j-i+1 on query range [i,j]
-4.- using space(our encoding only) : it gives depth/ldepth structure size. For example, parameter 0.25 means we use 0.25n bits of depth/ldepth structure.
-
+To use the library you must complie your program linking 'DFUDSR2MQ.a' and include the file for what you are using.<br/>
+For example to compile the file example.cpp (included here) we will run:<br/>
+g++ -std=c++11 -O3 -DNDEBUG example.cpp -o example DFUDSR2MQ.a -I ~/include -L ~/lib -lsdsl -ldivsufsort -ldivsufsort64<br/>
+This binary have to receive 2 parameter.<br/>
+1.- mode : execute which Top-2 structure, 0 : our encoding, 3 : Fischer, Heun Indexing<br/>
+2.- path : integer array file path, integer should be splited using '\n'<br/>
+3.- query size : gives query size j-i+1 on query range [i,j]<br/>
+4.- using space(our encoding only) : it gives depth/ldepth structure size. For example, parameter 0.25 means we use 0.25n bits of depth/ldepth structure.<br/>
+<br/>
 For example, when we use 0.25n bits for depth/ldepth structure size for test query size 1000 and use our encoding for "RANDOM4.txt" file:
 ./example 0 "RANDOM4.txt" 1000 0.25
 
