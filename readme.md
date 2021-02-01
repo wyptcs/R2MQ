@@ -13,7 +13,7 @@ Compile:
 To use the library you must complie your program linking 'DFUDSR2MQ.a' and include the file for what you are using.<br/>
 For example to compile the file example.cpp (included here) we will run:<br/>
 g++ -std=c++11 -O3 -DNDEBUG example.cpp -o example DFUDSR2MQ.a -I ~/include -L ~/lib -lsdsl -ldivsufsort -ldivsufsort64<br/>
-This binary have to receive 2 parameter.<br/>
+This binary have to receive 4 parameter.<br/>
 1.- mode : execute which Top-2 structure, 0 : our encoding, 3 : Fischer, Heun Indexing<br/>
 2.- path : integer array file path, integer should be splited using '\n'<br/>
 3.- query size : gives query size j-i+1 on query range [i,j]<br/>
@@ -22,7 +22,7 @@ This binary have to receive 2 parameter.<br/>
 For example, when we use 0.25n bits for depth/ldepth structure size for test query size 1000 and use our encoding for "RANDOM4.txt" file:
 ./example 0 "RANDOM4.txt" 1000 0.25
 
-References
+References<br/>
 [1]. K. Sadakane and G. Navarro. Fully-Functional Static and Dynamic Succinct Trees. ACM Transactions on Algorithms 10(3):article 16, 2014.<br/>
 [2]. Simon Gog, Timo Beller, Alistair Moffat, and Matthias Petri, “From theory to practice:Plug  and  play  with  succinct  data  structures,”   in13th International Symposium onExperimental Algorithms, (SEA 2014), 2014, pp. 326–337.<br/>
 [3]. Hector Ferrada and Gonzalo Navarro, “Improved range minimum queries,”J. DiscreteAlgorithms, vol. 43, pp. 72–80, 2017.<br/>
