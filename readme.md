@@ -23,8 +23,8 @@ For example, when we use 0.25n bits for depth/ldepth structure size for test que
 ./example 0 "RANDOM4.txt" 1000 0.25
 
 References
-[1]. K. Sadakane and G. Navarro. Fully-Functional Static and Dynamic Succinct Trees. ACM Transactions on Algorithms 10(3):article 16, 2014.
-[2]. Simon Gog, Timo Beller, Alistair Moffat, and Matthias Petri, “From theory to practice:Plug  and  play  with  succinct  data  structures,”   in13th International Symposium onExperimental Algorithms, (SEA 2014), 2014, pp. 326–337.
-[3]. Hector Ferrada and Gonzalo Navarro, “Improved range minimum queries,”J. DiscreteAlgorithms, vol. 43, pp. 72–80, 2017.
-[4]. J. Fischer and V. Heun. Space-efficient preprocessing schemes for range minimum queries on static arrays. SIAM Journal on Computing, 40(2):465–492, 2011.
-[5]. Baumstark N, Gog S, Heuer T, Labeit J. Practical range minimum queries revisited. In: Proceedings of the 16th International Symposium on Experimental Algorithms (SEA 2017); 2017; London. UK.
+[1]. K. Sadakane and G. Navarro. Fully-Functional Static and Dynamic Succinct Trees. ACM Transactions on Algorithms 10(3):article 16, 2014.<br/>
+[2]. Simon Gog, Timo Beller, Alistair Moffat, and Matthias Petri, “From theory to practice:Plug  and  play  with  succinct  data  structures,”   in13th International Symposium onExperimental Algorithms, (SEA 2014), 2014, pp. 326–337.<br/>
+[3]. Hector Ferrada and Gonzalo Navarro, “Improved range minimum queries,”J. DiscreteAlgorithms, vol. 43, pp. 72–80, 2017.<br/>
+[4]. J. Fischer and V. Heun. Space-efficient preprocessing schemes for range minimum queries on static arrays. SIAM Journal on Computing, 40(2):465–492, 2011.<br/>
+[5]. Baumstark N, Gog S, Heuer T, Labeit J. Practical range minimum queries revisited. In: Proceedings of the 16th International Symposium on Experimental Algorithms (SEA 2017); 2017; London. UK.<br/>
