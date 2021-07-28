@@ -1,0 +1,3 @@
+/home/woo/CLionProjects/tcsgithub/spaceefficient/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/woo/CLionProjects/tcsgithub/spaceefficient/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/woo/CLionProjects/tcsgithub/spaceefficient/cmake-build-debug/CMakeFiles/spaceefficient.dir
