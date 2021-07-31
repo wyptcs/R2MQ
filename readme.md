@@ -2,10 +2,14 @@ This code creates an encoding data structure to compute R2MQ(i,j) on an array of
 Contact : wypark2510@gmail.com
 
 Description:
-This is an RT2Q compressed data structure. We used Range Min-Max Tree of Sadakane and Navarro[[1] on SDSL library[2]. In order to reduce the size, our Range Min-Max Tree uses minimum field only. Also, this includes three RMQ structures for comparison, based on the method of Ferrada and Navarro[3], Fischer and Heun[4], BGHL[5]
+This is an RT2Q compressed data structure. We implemented two experiments. The one is 'RT2Qquery' folder. it is encoding data structures which calculate query time and space usage. We used Range Min-Max Tree of Sadakane and Navarro[[1] on SDSL library[2]. In order to reduce the size, our Range Min-Max Tree uses minimum field only. Also, this includes three RMQ structures for comparison, based on the method of Ferrada and Navarro[3], Fischer and Heun[4], BGHL[5]
 We included our test example which creates experimental results of our paper, and toy example based on Figure 1 of our paper.
+The other is 'spaceefficient' folder. it is encoding data structures which calculate encoding time and space usage. We used our data structure with DAG structure[6] and Optimal structure[7].
 
 Make:
+
+For space usage and query time test
+
 To make the library give the command make and this will create the lib: 'DFUDSR2MQ.a'. To test our toy example, give the command 'make tutorial', and to test our experiment, give the command 'make example'(it is for ours and our implementation based on Fischer and Heun[4].
 To test other comparison test cases, give the command 'make dccdfuds' 'make dccbp' 'make sea'<br/>
 summary : make && make example (ours)<br/>
@@ -13,7 +17,14 @@ make && make sea [2]<br/>
 make && make dccdfuds [3]<br/>
 make && make dccbp [3]<br/>
 
+For encoding time and encoding space test
+
+Just give the command make and it will make binary 'spacetest'
+
 Compile:
+
+For space usage and query time test
+
 To use the library you must complie your program linking 'DFUDSR2MQ.a' and include the file for what you are using.<br/>
 For example to compile the file example.cpp (included here) we will run:<br/>
 g++ -std=c++11 -O3 -DNDEBUG example.cpp -o example DFUDSR2MQ.a -I ~/include -L ~/lib -lsdsl -ldivsufsort -ldivsufsort64<br/>
@@ -29,6 +40,17 @@ For example, when we use 0.25n bits for depth/ldepth structure size for test que
 To test [4] at the same file and query size, use ./example 3 RANDOM5.txt 1000<br/>
 Also, to test [2] at the same file and query size, use  ./SEATEST RANDOM5.txt 1000 command.<br/>
 to test [3], use ./dcctest RANDOM5.txt 1000 on dfuds mode or ./dccbptest RANDOM5.txt 1000 on bp mode<br/>
+
+For encoding time and encoding space test
+
+To evaluate encoding time and encoding space, 'spacetest' takes three parameters.
+
+1.- path : integer array file path, integer should be splited using '\n'<br/>
+2.- optmode : when constructing DAG, to use optimization scheme give 1 else give 0.
+3.- revmode : when constructing our data structure, value 1 means reverse the original array else value 0.
+For example, to test using optimizing and not using revmode with RANDOM5.txt, use ./spacetest RANDOM5.txt 1 0.
+
+
 
 References<br/>
 [1]. K. Sadakane and G. Navarro. Fully-Functional Static and Dynamic Succinct Trees. ACM Transactions on Algorithms 10(3):article 16, 2014.<br/>
