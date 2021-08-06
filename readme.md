@@ -5,7 +5,7 @@ Contact : wypark2510@gmail.com
 <br/>
 <br/>
 Description:<br/>
-This is an RT2Q compressed data structure on 'RT2Qquery' folder. it is encoding data structures which calculate query time and space usage. We used Range Min-Max Tree of Sadakane and Navarro[[1] on SDSL library[2]. In order to reduce the size, our Range Min-Max Tree uses minimum field only. Also, this includes three RMQ structures for comparison, based on the method of Ferrada and Navarro[3], Fischer and Heun[4], BGHL[5]
+This is an RT2Q compressed data structure on 'RT2Qquery' folder. This experiment calculates query time and space usage. We used Range Min-Max Tree of Sadakane and Navarro[[1] on SDSL library[2]. In order to reduce the size, our Range Min-Max Tree uses minimum field only. Also, this includes three RMQ structures for comparison, based on the method of Ferrada and Navarro[3], Fischer and Heun[4], BGHL[5]
 We included our test example which creates experimental results of our paper, and toy example based on Figure 1 of our paper.
 
 Make:<br/>
@@ -20,9 +20,6 @@ make && make dccdfuds [3]<br/>
 make && make dccbp [3]<br/>
 
 Compile:<br/>
-
-For space usage and query time test<br/>
-
 To use the library you must complie your program linking 'DFUDSR2MQ.a' and include the file for what you are using.<br/>
 For example to compile the file example.cpp (included here) we will run:<br/>
 g++ -std=c++11 -O3 -DNDEBUG example.cpp -o example DFUDSR2MQ.a -I ~/include -L ~/lib -lsdsl -ldivsufsort -ldivsufsort64<br/>
@@ -46,14 +43,14 @@ to test [3], use ./dcctest RANDOM5.txt 1000 on dfuds mode or ./dccbptest RANDOM5
 <br/>
 <br/>
 Description:<br/>
-This is an RT2Q compressed data structure on ''spaceefficient' folder. it is encoding data structures which calculate encoding time and space usage. We used our data structure with DAG structure[6] and Optimal structure[7].
+This is an RT2Q compressed data structure on 'spaceefficient' folder. This experiment calculates encoding time and space usage. We used our data structure with DAG structure[6] and Optimal structure[7].
 
 Make:<br/>
 For encoding time and encoding space test<br/>
 Just give the command make and it will make binary 'spacetest'<br/>
 
 Compile:<br/>
-To evaluate encoding time and encoding space, 'spacetest' takes three parameters.<br/>
+To conduct experiment, 'spacetest' takes three parameters.<br/>
 
 1.- path : integer array file path, integer should be splited using '\n'<br/>
 2.- optmode : when constructing DAG, to use optimization scheme give 1 else give 0.<br/>
