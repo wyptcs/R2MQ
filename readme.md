@@ -29,7 +29,6 @@ This binary have to receive 4 parameter.<br/>
 3.- query size : gives query size j-i+1 on query range [i,j]<br/>
 4.- using space(our encoding only) : it gives depth/ldepth structure size. For example, parameter 0.25 means we use 0.25n bits of depth/ldepth structure.<br/>
 <br/>
-<br/>
 For example, when we use 0.25n bits for depth/ldepth structure size for test query size 1000 and use our encoding for "RANDOM5.txt" file:
 ./example 0 RANDOM5.txt 1000 0.25<br/>
 To test [4] at the same file and query size, use ./example 3 RANDOM5.txt 1000<br/>
@@ -54,6 +53,7 @@ To conduct experiment, 'spacetest' takes three parameters.<br/>
 1.- path : integer array file path, integer should be splited using '\n'<br/>
 2.- optmode : when constructing DAG, to use optimization scheme give 1 else give 0.<br/>
 3.- revmode : when constructing our data structure, value 1 means reverse the original array else value 0.<br/>
+<br/>
 For example, to test using optimizing and not using revmode with RANDOM5.txt, use ./spacetest RANDOM5.txt 1 0.<br/>
 <br/>
 <br/>
