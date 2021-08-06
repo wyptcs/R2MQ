@@ -51,15 +51,14 @@ Just give the command make and it will make binary 'spacetest'<br/>
 
 Compile:<br/>
 To conduct experiment, 'spacetest' takes three parameters.<br/>
-
 1.- path : integer array file path, integer should be splited using '\n'<br/>
 2.- optmode : when constructing DAG, to use optimization scheme give 1 else give 0.<br/>
 3.- revmode : when constructing our data structure, value 1 means reverse the original array else value 0.<br/>
 For example, to test using optimizing and not using revmode with RANDOM5.txt, use ./spacetest RANDOM5.txt 1 0.<br/>
+<br/>
+<br/>
 
-
-
-References<br/>
+**References**<br/>
 [1]. K. Sadakane and G. Navarro. Fully-Functional Static and Dynamic Succinct Trees. ACM Transactions on Algorithms 10(3):article 16, 2014.<br/>
 [2]. Simon Gog, Timo Beller, Alistair Moffat, and Matthias Petri, “From theory to practice:Plug  and  play  with  succinct  data  structures,”   in13th International Symposium onExperimental Algorithms, (SEA 2014), 2014, pp. 326–337.<br/>
 [3]. Hector Ferrada and Gonzalo Navarro, “Improved range minimum queries,”J. DiscreteAlgorithms, vol. 43, pp. 72–80, 2017.<br/>
