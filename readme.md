@@ -1,10 +1,12 @@
 This code creates an encoding data structure to compute R2MQ(i,j) on an array of unsigned integers.
 Contact : wypark2510@gmail.com
 
-Description:
-This is an RT2Q compressed data structure. We implemented two experiments. The one is 'RT2Qquery' folder. it is encoding data structures which calculate query time and space usage. We used Range Min-Max Tree of Sadakane and Navarro[[1] on SDSL library[2]. In order to reduce the size, our Range Min-Max Tree uses minimum field only. Also, this includes three RMQ structures for comparison, based on the method of Ferrada and Navarro[3], Fischer and Heun[4], BGHL[5]
+**data structures for answering RT2Q**
+<br/>
+<br/>
+Description:<br/>
+This is an RT2Q compressed data structure on 'RT2Qquery' folder. it is encoding data structures which calculate query time and space usage. We used Range Min-Max Tree of Sadakane and Navarro[[1] on SDSL library[2]. In order to reduce the size, our Range Min-Max Tree uses minimum field only. Also, this includes three RMQ structures for comparison, based on the method of Ferrada and Navarro[3], Fischer and Heun[4], BGHL[5]
 We included our test example which creates experimental results of our paper, and toy example based on Figure 1 of our paper.
-The other is 'spaceefficient' folder. it is encoding data structures which calculate encoding time and space usage. We used our data structure with DAG structure[6] and Optimal structure[7].
 
 Make:<br/>
 
@@ -16,10 +18,6 @@ summary : make && make example (ours)<br/>
 make && make sea [2]<br/>
 make && make dccdfuds [3]<br/>
 make && make dccbp [3]<br/>
-
-For encoding time and encoding space test<br/>
-
-Just give the command make and it will make binary 'spacetest'<br/>
 
 Compile:<br/>
 
@@ -40,9 +38,21 @@ For example, when we use 0.25n bits for depth/ldepth structure size for test que
 To test [4] at the same file and query size, use ./example 3 RANDOM5.txt 1000<br/>
 Also, to test [2] at the same file and query size, use  ./SEATEST RANDOM5.txt 1000 command.<br/>
 to test [3], use ./dcctest RANDOM5.txt 1000 on dfuds mode or ./dccbptest RANDOM5.txt 1000 on bp mode<br/>
+<br/>
+<br/>
+<br/>
 
+**space-efficient encodings for RT2Q**
+<br/>
+<br/>
+Description:<br/>
+This is an RT2Q compressed data structure on ''spaceefficient' folder. it is encoding data structures which calculate encoding time and space usage. We used our data structure with DAG structure[6] and Optimal structure[7].
+
+Make:<br/>
 For encoding time and encoding space test<br/>
+Just give the command make and it will make binary 'spacetest'<br/>
 
+Compile:<br/>
 To evaluate encoding time and encoding space, 'spacetest' takes three parameters.<br/>
 
 1.- path : integer array file path, integer should be splited using '\n'<br/>
