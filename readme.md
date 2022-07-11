@@ -7,6 +7,8 @@ Contact : wypark2510@gmail.com
 Description:<br/>
 This is an RT2Q compressed data structure on 'RT2Qquery' folder. This experiment calculates query time and space usage. We used Range Min-Max Tree of Sadakane and Navarro[[1] on SDSL library[2]. In order to reduce the size, our Range Min-Max Tree uses minimum field only. Also, this includes three RMQ structures for comparison, based on the method of Ferrada and Navarro[3], Fischer and Heun[4], BGHL[5]
 We included our test example which creates experimental results of our paper, and toy example based on Figure 1 of our paper.
+On 'spaceefficient' folder, there are implementations for comparing three top-2 encoding schemes. 
+
 
 Make:<br/>
 
